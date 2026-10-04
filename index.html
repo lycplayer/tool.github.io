@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>lycplayer 的工具箱</title>
+<meta name="description" content="lycplayer 的个人工具集 · 本地运行的实用小工具">
+<style>
+:root{
+  --text:#10203a; --mut:#5b6b86; --faint:#8a98b3;
+  --accent:#4e6ef2; --accent2:#7d5cff; --ok:#12a678;
+  --glass:rgba(255,255,255,.55); --glass2:rgba(255,255,255,.32);
+  --edge:rgba(255,255,255,.8); --edge-low:rgba(16,32,58,.1);
+  --shadow:0 18px 50px rgba(30,50,90,.18);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:-apple-system,"Segoe UI","Microsoft YaHei",system-ui,sans-serif;
+  color:var(--text); line-height:1.7; min-height:100vh;
+  background:linear-gradient(135deg,#eef2ff 0%,#f3e9ff 45%,#e6fff4 100%);
+  background-attachment:fixed;
+}
+.bg{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.55}
+.b1{width:520px;height:520px;left:-8%;top:-12%;background:radial-gradient(circle,#7aa2ff,#4e6ef2 60%,transparent 72%)}
+.b2{width:460px;height:460px;right:-6%;top:8%;background:radial-gradient(circle,#c8a0ff,#7d5cff 60%,transparent 72%)}
+.b3{width:560px;height:560px;left:30%;bottom:-24%;background:radial-gradient(circle,#8ef0d4,#28c3a0 60%,transparent 72%)}
+.wrap{position:relative;z-index:1;max-width:920px;margin:0 auto;padding:40px 20px 60px}
+.topbar{display:flex;align-items:center;gap:12px;margin-bottom:34px}
+.brand-dot{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#6f8cff,#4e6ef2);box-shadow:0 6px 16px rgba(78,110,242,.4),inset 0 1px 0 rgba(255,255,255,.6)}
+.brand-name{font-weight:700;font-size:18px;letter-spacing:.3px}
+.glass{background:linear-gradient(135deg,var(--glass),var(--glass2));backdrop-filter:blur(26px) saturate(180%);
+  -webkit-backdrop-filter:blur(26px) saturate(180%);border:1px solid var(--edge);border-radius:24px;box-shadow:var(--shadow)}
+.hero{padding:54px 40px;text-align:center;margin-bottom:26px}
+.logo{width:72px;height:72px;border-radius:20px;margin:0 auto 22px;
+  background:linear-gradient(135deg,#6f8cff,#4e6ef2);box-shadow:0 10px 26px rgba(78,110,242,.45),inset 0 1px 0 rgba(255,255,255,.6)}
+.hero h1{margin:0 0 10px;font-size:34px;letter-spacing:.5px}
+.hero .sub{color:var(--mut);font-size:16px;margin-bottom:28px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 30px;font-size:16px;font-weight:600;
+  border-radius:16px;cursor:pointer;text-decoration:none;color:#fff;border:none;
+  background:linear-gradient(135deg,#6f8cff,#4e6ef2);box-shadow:0 12px 26px rgba(78,110,242,.4),inset 0 1px 0 rgba(255,255,255,.45);
+  transition:.18s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(78,110,242,.5)}
+.hint{margin-top:14px;font-size:12.5px;color:var(--faint)}
+.feat{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:26px 0}
+.card{padding:22px 22px;transition:.18s;text-decoration:none;color:inherit;display:block}
+.card:hover{transform:translateY(-3px);box-shadow:0 24px 60px rgba(30,50,90,.22)}
+.card h3{margin:0 0 8px;font-size:16px;display:flex;align-items:center;gap:9px}
+.card p{margin:0;color:var(--mut);font-size:14px}
+.ico{width:30px;height:30px;border-radius:9px;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,#6f8cff,#4e6ef2);color:#fff;font-size:15px;box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+.foot{text-align:center;margin-top:30px;color:var(--faint);font-size:13px}
+.foot a{color:var(--accent);text-decoration:none}
+.foot a:hover{text-decoration:underline}
+code{font-family:ui-monospace,Consolas,Menlo,monospace;background:rgba(16,32,58,.06);padding:1px 6px;border-radius:6px;font-size:12.5px}
+@media(max-width:640px){.feat{grid-template-columns:1fr}.hero{padding:40px 22px}.hero h1{font-size:27px}}
+</style>
+</head>
+<body>
+<div class="bg"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand-dot"></div>
+    <div class="brand-name">lycplayer 的工具箱</div>
+  </div>
+
+  <section class="glass hero">
+    <div class="logo"></div>
+    <h1>欢迎来到 lycplayer 的工具箱</h1>
+    <div class="sub">本地运行、注重隐私的实用小工具合集</div>
+    <a class="btn" href="PAN/">⬇ 进入「更好的网盘直链下载工具」</a>
+    <div class="hint">所有工具均在你的本机运行，不收集任何账号信息</div>
+  </section>
+
+  <section class="feat">
+    <a class="glass card" href="PAN/">
+      <h3><span class="ico">⚡</span>网盘直链下载工具</h3>
+      <p>把百度网盘文件换成 HTTP 直链，免登录解析分享，本地运行不碰你的账号。</p>
+    </a>
+    <div class="glass card">
+      <h3><span class="ico">🛠</span>更多工具筹备中</h3>
+      <p>这个工具箱会慢慢补充更多实用的小工具，敬请期待。</p>
+    </div>
+  </section>
+
+  <div class="foot">
+    作者 <b>lycplayer</b> · 邮箱 <a href="mailto:lycplayer@outlook.com">lycplayer@outlook.com</a><br>
+    © <span id="y"></span> lycplayer 的工具箱
+  </div>
+</div>
+
+<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
