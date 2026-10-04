@@ -6,8 +6,10 @@
 
 ## 🌐 在线下载
 
-- 工具箱首页：https://lycplayer.github.io/
-- 下载工具页：https://lycplayer.github.io/PAN/
+> 本仓库以「项目页」形式发布在 GitHub Pages，地址带 `/tool.github.io/` 后缀。
+
+- 工具箱首页：https://lycplayer.github.io/tool.github.io/
+- 下载工具页：https://lycplayer.github.io/tool.github.io/PAN/
 
 ## ✨ 功能特性
 
